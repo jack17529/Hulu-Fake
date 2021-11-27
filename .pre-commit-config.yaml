@@ -3,4 +3,17 @@ repos:
   rev: v1.58.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
   hooks:
     - id: terraform_fmt
-    - id: terraform_docs
+    - id: terraform_validate
+    # - id: terraform_docs
+
+- repo: git://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.1
+  hooks:
+    - id: check-merge-conflict
+    - id: end-of-file-fixer
+    - id: check-yaml
+    - id: check-added-large-files
+    - id: check-executables-have-shebangs
+    - id: check-json
+    - id: detect-private-key
+    - id: trailing-whitespace
